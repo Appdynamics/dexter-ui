@@ -19,20 +19,13 @@ class Heading extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </li>
-          </ul>
-        </div>
         <Link to="/input">
           <button className="btn btn-primary my-2 my-sm-0">
             Create Job File
           </button>
+        </Link>
+        <Link className="nav-link" to="/about">
+          About
         </Link>
       </nav>
     )

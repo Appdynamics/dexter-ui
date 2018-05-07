@@ -1,28 +1,7 @@
-// @flow
 import React, { Component } from 'react'
 import Form from 'react-jsonschema-form'
 import inputSchema from '../../schemas/inputSchema'
 import inputFormUISchema from './InputFormUISchema'
-
-const ObjectFieldTemplate = ({
-  TitleField,
-  properties,
-  title,
-  description,
-  className,
-}) => (
-  <div>
-    <TitleField title={title} />
-    <div className="row">
-      {properties.map(prop => (
-        <div className={className} key={prop.content.key}>
-          {prop.content}
-        </div>
-      ))}
-    </div>
-    {description}
-  </div>
-)
 
 export default class InputForm extends Component {
   constructor(props) {
@@ -51,7 +30,6 @@ export default class InputForm extends Component {
             onChange={console.log('changed')}
             onSubmit={this.handleSubmit}
             onError={console.log('errors')}
-            ObjectFieldTemplate={ObjectFieldTemplate}
           />
         </div>
       </div>
