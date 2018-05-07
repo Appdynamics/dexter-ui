@@ -5,8 +5,7 @@
   "scripts": {
     "prebuild-css": "shx cp -R node_modules/bootstrap/scss src/bootstrap",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "analyze": "npm run build && source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "start": "npm-run-all -p watch-css start-js",
@@ -31,6 +30,7 @@
     "popper.js": "^1.12.9",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-jsonschema-form": "^1.0.3",

@@ -1,34 +1,27 @@
 import React, { Component } from 'react'
 import Form from 'react-jsonschema-form'
 import inputSchema from '../../schemas/inputSchema'
-import inputFormUISchema from './InputFormUISchema'
+import inputUISchema from './inputUISchema'
+import { withRouter } from 'react-router'
 
-export default class InputForm extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
-  handleInputChange = event => {
-    const { target } = event
-    const value = target.type === 'checkbox' ? target.checked : target.value
-    const { name } = target
-
-    this.setState({ [name]: value })
-  }
-  handleSubmit = event => {
-    console.log('here')
-    console.log(event)
+class InputForm extends Component {
+  handleSubmit = ({ formData }) => {
+    localStorage.setItem('formDataInput', JSON.stringify(formData))
+    this.props.history.push('/output')
   }
   render() {
+    let schema = inputSchema
+    let uiSchema = inputUISchema
+
     return (
       <div>
         <div className="container">
-          <h1>Input</h1>
+          <h1 className="mt-4">Input</h1>
           <Form
-            schema={inputSchema}
-            uiSchema={inputFormUISchema}
+            schema={schema}
+            uiSchema={uiSchema}
             onChange={console.log('changed')}
-            onSubmit={this.handleSubmit}
+            onSubmit={this.handleSubmit.bind(this)}
             onError={console.log('errors')}
           />
         </div>
@@ -36,3 +29,5 @@ export default class InputForm extends Component {
     )
   }
 }
+
+export default withRouter(InputForm)
