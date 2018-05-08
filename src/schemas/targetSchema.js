@@ -9,7 +9,7 @@ export default {
       UserName: { type: 'string' },
       UserPassword: { type: 'string' },
       Application: { type: 'string' },
-      NameRegex: { type: 'boolean' }
-    }
-  }
+      NameRegex: { type: 'boolean' },
+    },
+  },
 }

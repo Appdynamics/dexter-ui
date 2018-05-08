@@ -6,10 +6,10 @@ export default {
       type: 'object',
       properties: {
         From: { type: 'string' },
-        To: { type: 'string' }
-      }
+        To: { type: 'string' },
+      },
     },
-    Metrics: { type: 'boolean' },
+    Metrics: { type: 'boolean', default: true },
     MetricsSelectionCriteria: { type: 'array', items: { type: 'string' } },
     Flowmaps: { type: 'boolean' },
     Configuration: { type: 'boolean' },
@@ -22,7 +22,7 @@ export default {
         TierType: {
           type: 'object',
           properties: {
-            All: { type: 'boolean' },
+            All: { type: 'boolean', default: true },
             APP_AGENT: { type: 'boolean' },
             DOT_NET_APP_AGENT: { type: 'boolean' },
             NATIVE_APP_AGENT: { type: 'boolean' },
@@ -32,19 +32,19 @@ export default {
             NODEJS_APP_AGENT: { type: 'boolean' },
             PHP_APP_AGENT: { type: 'boolean' },
             PYTHON_APP_AGENT: { type: 'boolean' },
-            RUBY_APP_AGENT: { type: 'boolean' }
-          }
-        }
-      }
+            RUBY_APP_AGENT: { type: 'boolean' },
+          },
+        },
+      },
     },
     BusinessTransactions: {
       type: 'array',
-      items: { type: 'string' }
+      items: { type: 'string' },
     },
     BusinessTransactionType: {
       type: 'object',
       properties: {
-        All: { type: 'boolean' },
+        All: { type: 'boolean', default: true },
         SERVLET: { type: 'boolean' },
         HTTP: { type: 'boolean' },
         WEB_SERVICE: { type: 'boolean' },
@@ -71,26 +71,26 @@ export default {
         PYTHON_WEB: { type: 'boolean' },
         RUBY_WEB: { type: 'boolean' },
         RUBY_RAILS: { type: 'boolean' },
-        BINARY_REMOTING: { type: 'boolean' }
-      }
+        BINARY_REMOTING: { type: 'boolean' },
+      },
     },
     UserExperience: {
       type: 'object',
       properties: {
-        Normal: { type: 'boolean' },
-        Slow: { type: 'boolean' },
-        VerySlow: { type: 'boolean' },
-        Stall: { type: 'boolean' },
-        Error: { type: 'boolean' }
-      }
+        Normal: { type: 'boolean', default: true },
+        Slow: { type: 'boolean', default: true },
+        VerySlow: { type: 'boolean', default: true },
+        Stall: { type: 'boolean', default: true },
+        Error: { type: 'boolean', default: true },
+      },
     },
     SnapshotType: {
       type: 'object',
       properties: {
-        Full: { type: 'boolean' },
-        Partial: { type: 'boolean' },
-        None: { type: 'boolean' }
-      }
-    }
-  }
+        Full: { type: 'boolean', default: true },
+        Partial: { type: 'boolean', default: true },
+        None: { type: 'boolean' },
+      },
+    },
+  },
 }
