@@ -1,3 +1,4 @@
+import React from 'react'
 export default {
   TimeRange: {
     From: {
@@ -11,7 +12,11 @@ export default {
   },
   Metrics: {
     'ui:widget': 'radio',
-    'ui:description': 'Collect metrics or not',
+    'ui:description': (
+      <div>
+        hi <a href="">Stuff</a>
+      </div>
+    ),
     'ui:options': {
       inline: true,
     },
