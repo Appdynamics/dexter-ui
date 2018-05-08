@@ -1,3 +1,13 @@
+# DEXTER-UI
+
+Uses React and libraries:
+
+- [Bootstrap 4](http://getbootstrap.com/)
+- [jsonschema](https://github.com/tdegrunt/jsonschema)
+- [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form)
+- [react-copy-to-clipboard](https://github.com/nkbt/react-copy-to-clipboard)
+
+
 # Deploy
 1. Install [pip](https://pip.pypa.io//en/latest/installing/) with `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python get-pip.py`
 1. Install awscli `sudo pip install awscli`
