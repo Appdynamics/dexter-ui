@@ -17,6 +17,10 @@ class InputForm extends Component {
       <div>
         <div className="container">
           <h1 className="mt-4">Input</h1>
+          <p>
+            What to get, including time range and what to select, and what to
+            convert to data warehouse CSVs
+          </p>
           <Form
             schema={schema}
             uiSchema={uiSchema}

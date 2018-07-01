@@ -16,6 +16,7 @@ export default class targetForm extends Component {
       <div>
         <div className="container">
           <h1 className="mt-4">Target</h1>
+          <p>What Controller(s) and Applications(s) to query</p>
           <Form
             schema={schema}
             uiSchema={uiSchema}

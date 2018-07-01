@@ -16,6 +16,7 @@ export default class OutputForm extends Component {
       <div>
         <div className="container">
           <h1 className="mt-4">Output</h1>
+          <p>What reports to produce using input data</p>
           <Form
             schema={schema}
             uiSchema={uiSchema}
