@@ -1,11 +1,13 @@
 {
   "name": "dexter-ui",
+  "homepage": "https://sys13.github.io/dexter-ui",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "prebuild-css": "shx cp -R node_modules/bootstrap/scss src/bootstrap",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "analyze": "npm run build && source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "start": "npm-run-all -p watch-css start-js",
@@ -14,15 +16,15 @@
     "build-js": "env-cmd .env.production react-scripts build",
     "test": "env-cmd .env.development react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && env-cmd .env.production ./upload.sh",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "create-bucket": "env-cmd .env.production ./create_bucket.sh",
-    "create-cloudfront": "env-cmd .env.production ./create_cloudfront.sh"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
     "env-cmd": "^7.0.0",
+    "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "jquery": "^3.3.1",
     "jsonschema": "^1.2.4",
