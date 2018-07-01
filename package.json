@@ -6,8 +6,7 @@
   "scripts": {
     "prebuild-css": "shx cp -R node_modules/bootstrap/scss src/bootstrap",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "analyze": "npm run build && source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "start": "npm-run-all -p watch-css start-js",

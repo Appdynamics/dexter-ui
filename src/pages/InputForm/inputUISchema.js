@@ -146,47 +146,47 @@ export default {
         inline: true,
       },
     },
-  },
-  BusinessTransactions: {
-    'ui:title': 'SnapshotSelectionCriteria\\BusinessTransactions ',
-    'ui:options': {
-      orderable: false,
+    BusinessTransactions: {
+      'ui:title': 'SnapshotSelectionCriteria\\BusinessTransactions ',
+      'ui:options': {
+        orderable: false,
+      },
+      'ui:description': (
+        <div>
+          Filters Snapshots to be extracted to only ones originating from these
+          Business Transactions. Regular expressions are supported (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactions-array-of-strings">
+            Docs
+          </a>)
+        </div>
+      ),
     },
-    'ui:description': (
-      <div>
-        Filters Snapshots to be extracted to only ones originating from these
-        Business Transactions. Regular expressions are supported (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactions-array-of-strings">
-          Docs
-        </a>)
-      </div>
-    ),
-  },
-  BusinessTransactionType: {
-    'ui:title': 'SnapshotSelectionCriteria\\BusinessTransactionType',
-    'ui:widget': 'checkboxes',
-    'ui:options': {
-      inline: true,
+    BusinessTransactionType: {
+      'ui:title': 'SnapshotSelectionCriteria\\BusinessTransactionType',
+      'ui:widget': 'checkboxes',
+      'ui:options': {
+        inline: true,
+      },
+      'ui:description': (
+        <div>
+          Contains settings for filtering by Business Transaction Type. Each of
+          the settings specifies the type of Business Transaction which will be
+          included. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactiontypesetting-boolean">
+            Docs
+          </a>)
+        </div>
+      ),
     },
-    'ui:description': (
-      <div>
-        Contains settings for filtering by Business Transaction Type. Each of
-        the settings specifies the type of Business Transaction which will be
-        included. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactiontypesetting-boolean">
-          Docs
-        </a>)
-      </div>
-    ),
-  },
-  UserExperience: {
-    'ui:title': 'SnapshotSelectionCriteria\\UserExperience',
-    'ui:description': (
-      <div>Contains settings for filtering by User Experience</div>
-    ),
-  },
-  SnapshotType: {
-    'ui:title': 'SnapshotSelectionCriteria\\SnapshotType',
-    'ui:description': (
-      <div>Contains settings for filtering by Snapshot Type</div>
-    ),
+    UserExperience: {
+      'ui:title': 'SnapshotSelectionCriteria\\UserExperience',
+      'ui:description': (
+        <div>Contains settings for filtering by User Experience</div>
+      ),
+    },
+    SnapshotType: {
+      'ui:title': 'SnapshotSelectionCriteria\\SnapshotType',
+      'ui:description': (
+        <div>Contains settings for filtering by Snapshot Type</div>
+      ),
+    },
   },
 }
