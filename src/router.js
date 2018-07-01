@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import App from './pages/App/App'
 import Heading from './components/Heading/Heading'
 import routes from './routes'
@@ -18,14 +18,14 @@ const RouteWithSubRoutes = route => (
 )
 
 const RouteConfig = () => (
-    <Router>
-      <App>
-        <Heading />
-        <Switch>
-          {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
-        </Switch>
-      </App>
-    </Router>
+  <Router>
+    <App>
+      <Heading />
+      <Switch>
+        {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+      </Switch>
+    </App>
+  </Router>
 )
 
 export default RouteConfig
