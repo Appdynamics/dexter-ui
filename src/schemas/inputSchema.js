@@ -8,6 +8,7 @@ export default {
         From: { type: 'string' },
         To: { type: 'string' },
       },
+      required: ['From', 'To'],
     },
     Metrics: { type: 'boolean', default: true },
     MetricsSelectionCriteria: { type: 'array', items: { type: 'string' } },
