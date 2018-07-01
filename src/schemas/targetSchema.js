@@ -6,7 +6,7 @@ export default {
     type: 'object',
     properties: {
       Controller: { type: 'string', format: 'uri' },
-      UserName: { type: 'string' },
+      UserName: { type: 'string', regex: ".*@.*" },
       UserPassword: { type: 'string' },
       Application: { type: 'string' },
       NameRegex: { type: 'boolean' },
