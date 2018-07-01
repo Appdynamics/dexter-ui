@@ -11,7 +11,13 @@ class Landing extends Component {
         </Helmet>
         <div className="jumbotron">
           <h1 className="display-3">DEXTER made easy</h1>
-          <p className="lead">Create a job file for DEXTER with a wizard</p>
+          <p className="lead">
+            Create a job file for{' '}
+            <a href="https://github.com/Appdynamics/AppDynamics.DEXTER">
+              DEXTER
+            </a>{' '}
+            with a wizard
+          </p>
           <Link to={`/input`}>
             <button className="btn btn-primary btn-lg">Create Job File</button>
           </Link>
