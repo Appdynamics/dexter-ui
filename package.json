@@ -6,7 +6,8 @@
   "scripts": {
     "prebuild-css": "shx cp -R node_modules/bootstrap/scss src/bootstrap",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "analyze": "npm run build && source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "start": "npm-run-all -p watch-css start-js",
@@ -15,8 +16,6 @@
     "build-js": "env-cmd .env.production react-scripts build",
     "test": "env-cmd .env.development react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -42,7 +41,6 @@
     "source-map-explorer": "^1.5.0"
   },
   "devDependencies": {
-    "@storybook/react": "^3.3.13",
     "prettierrc": "0.0.0-5"
   }
 }
