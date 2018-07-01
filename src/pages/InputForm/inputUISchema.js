@@ -1,6 +1,7 @@
 import React from 'react'
 export default {
   TimeRange: {
+    'ui:description': <div>Note this is in UTC/GMT time</div>,
     From: {
       'ui:widget': 'alt-datetime',
     },
