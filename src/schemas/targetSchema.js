@@ -11,6 +11,6 @@ export default {
       Application: { type: 'string' },
       NameRegex: { type: 'boolean' },
     },
-    required: ['Controller', 'UserName', 'UserPassword'],
+    required: ['Controller', 'UserName'],
   },
 }

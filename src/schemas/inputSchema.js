@@ -11,11 +11,30 @@ export default {
       required: ['From', 'To'],
     },
     Metrics: { type: 'boolean', default: true },
-    MetricsSelectionCriteria: { type: 'array', items: { type: 'string' } },
-    Flowmaps: { type: 'boolean' },
-    Configuration: { type: 'boolean' },
-    Events: { type: 'boolean' },
-    Snapshots: { type: 'boolean' },
+    MetricsSelectionCriteria: {
+      type: 'array',
+      items: { type: 'string' },
+      default: [
+        'Transaction',
+        'AgentStats',
+        'OSHardware',
+        'CLRStats',
+        'IISStats',
+        'JVMStats',
+        'BusinessTransactionPercentiles',
+      ],
+    },
+    Flowmaps: { type: 'boolean', default: true },
+    Configuration: { type: 'boolean', default: true },
+    ConfigurationComparisonReferenceCriteria: {
+      type: 'object',
+      properties: {
+        Controller: { type: 'string' },
+        Application: { type: 'string' },
+      },
+    },
+    Events: { type: 'boolean', default: true },
+    Snapshots: { type: 'boolean', default: true },
     SnapshotSelectionCriteria: {
       type: 'object',
       properties: {

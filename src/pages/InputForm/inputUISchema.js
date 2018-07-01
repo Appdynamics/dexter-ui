@@ -64,6 +64,24 @@ export default {
       inline: true,
     },
   },
+  ConfigurationComparisonReferenceCriteria: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        <p>
+          Specifies which Application to use as reference during configuration
+          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">
+            Docs
+          </a>)
+        </p>
+        <p>
+          If Controller is "https://reference.controller" and Application is
+          "ReferenceApp", then configuration comparison is performed against a
+          blank template application (TemplateApplicationConfiguration.xml)
+        </p>
+      </div>
+    ),
+  },
   Events: {
     'ui:widget': 'radio',
     'ui:description': (
