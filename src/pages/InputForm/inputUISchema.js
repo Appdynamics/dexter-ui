@@ -2,12 +2,10 @@ import React from 'react'
 export default {
   TimeRange: {
     From: {
-      'ui:widget': 'datetime',
-      // classNames: 'col-md',
+      'ui:widget': 'alt-datetime',
     },
     To: {
-      'ui:widget': 'datetime',
-      // classNames: 'col-md',
+      'ui:widget': 'alt-datetime',
     },
   },
   Metrics: {

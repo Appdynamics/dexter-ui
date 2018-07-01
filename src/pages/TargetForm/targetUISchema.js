@@ -1,9 +1,8 @@
 export default {
-  // '/Target': {
   items: {
     Controller: {
       'ui:description':
-        'URL of your controller. Ex: https://mycompany.saas.appdynamics.com',
+        'URL of your controller. Ex: https://mycompany.saas.appdynamics.com or http://localhost:9080',
     },
     UserName: {
       'ui:description':
