@@ -107,7 +107,7 @@ export default {
           properties: {
             Full: { type: 'boolean', default: true },
             Partial: { type: 'boolean', default: true },
-            None: { type: 'boolean' },
+            None: { type: 'boolean', default: true },
           },
         },
       },
