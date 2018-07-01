@@ -19,7 +19,9 @@ class About extends Component {
           </p>
           <p>
             Learn more about it at the{' '}
-            <a href="https://github.com/sys13/dexter-ui">GitHub repository</a>.
+            <a href="https://github.com/Appdynamics/dexter-ui">
+              GitHub repository
+            </a>.
           </p>
         </div>
       </div>
