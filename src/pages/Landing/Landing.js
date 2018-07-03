@@ -16,7 +16,16 @@ class Landing extends Component {
             <a href="https://github.com/Appdynamics/AppDynamics.DEXTER">
               DEXTER
             </a>{' '}
-            with a wizard
+            in just a few steps
+          </p>
+          <hr className="my-4" />
+          <p>
+            <a href="https://github.com/Appdynamics/AppDynamics.DEXTER">
+              DEXTER
+            </a>{' '}
+            is the amazing data warehousing and reports tool for AppDynamics.{' '}
+            <i>DEXTER-UI</i> helps you create the job file that tells DEXTER
+            what reports to create
           </p>
           <Link to={`/input`}>
             <button className="btn btn-primary btn-lg">Create Job File</button>
