@@ -4,7 +4,7 @@ _dexter-ui_ is a job file generator for [DEXTER](https://github.com/Appdynamics/
 
 It walks you through creating a job file, with helpful documentation along the way.
 
-Use _dexter-ui_ here: https://sys13.github.io/dexter-ui/
+Use _dexter-ui_ here: https://appdynamics.github.io/dexter-ui/
 
 # Libraries
 
