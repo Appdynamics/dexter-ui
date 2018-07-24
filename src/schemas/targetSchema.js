@@ -10,6 +10,7 @@ export default {
       UserPassword: { type: 'string' },
       Application: { type: 'string' },
       NameRegex: { type: 'boolean' },
+      Type: { type: 'string', default: 'APM', enum: ['APM', 'SIM', 'WEB'] },
     },
     required: ['Controller', 'UserName'],
   },
