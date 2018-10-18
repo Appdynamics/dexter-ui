@@ -41,6 +41,7 @@ export default {
       },
     },
     Events: { type: 'boolean', default: true },
+    UsersGroupsRolesPermissions: { type: 'boolean', default: true },
     Snapshots: { type: 'boolean', default: true },
     SnapshotSelectionCriteria: {
       type: 'object',

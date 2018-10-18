@@ -171,4 +171,19 @@ export default {
       inline: true,
     },
   },
+  UsersGroupsRolesPermissions: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Users, Groups, Roles and Permissions report shows information about each
+        and every security entity (User, Group, Role and Permission) and their
+        relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
 }

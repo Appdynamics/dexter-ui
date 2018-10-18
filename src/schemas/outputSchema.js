@@ -10,5 +10,6 @@ export default {
     Configuration: { type: 'boolean', default: true },
     Snapshots: { type: 'boolean', default: true },
     FlameGraphs: { type: 'boolean', default: true },
+    UsersGroupsRolesPermissions: { type: 'boolean', default: true },
   },
 }
