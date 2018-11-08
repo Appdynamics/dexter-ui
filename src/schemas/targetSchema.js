@@ -9,7 +9,7 @@ export default {
       UserName: { type: 'string', pattern: '.*@.*' },
       UserPassword: { type: 'string' },
       Application: { type: 'string' },
-      NameRegex: { type: 'boolean' },
+      NameRegex: { type: 'boolean', default: false },
       Type: {
         type: 'string',
         default: 'APM',
