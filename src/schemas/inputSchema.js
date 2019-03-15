@@ -10,6 +10,7 @@ export default {
       },
       required: ['From', 'To'],
     },
+    DetectedEntities: { type: 'boolean', default: true },
     Metrics: { type: 'boolean', default: true },
     MetricsSelectionCriteria: {
       type: 'array',

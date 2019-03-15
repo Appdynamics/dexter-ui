@@ -9,6 +9,19 @@ export default {
       'ui:widget': 'alt-datetime',
     },
   },
+  DetectedEntities: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Extract detected entities for this application type (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
   Metrics: {
     'ui:widget': 'radio',
     'ui:description': (
@@ -101,7 +114,9 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Users, Groups, Roles and Permissions report shows information about each and every security entity (User, Group, Role and Permission) and their relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
+        Users, Groups, Roles and Permissions report shows information about each
+        and every security entity (User, Group, Role and Permission) and their
+        relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
           Docs
         </a>)
       </div>

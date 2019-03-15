@@ -186,4 +186,30 @@ export default {
       inline: true,
     },
   },
+  Dashboards: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Extract dashboards, their widgets and time series (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
+  Licenses: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Extract license rules and license consumption (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
 }

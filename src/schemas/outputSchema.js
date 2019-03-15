@@ -11,5 +11,7 @@ export default {
     Snapshots: { type: 'boolean', default: true },
     FlameGraphs: { type: 'boolean', default: true },
     UsersGroupsRolesPermissions: { type: 'boolean', default: true },
+    Dashboards: { type: 'boolean', default: true },
+    Licenses: { type: 'boolean', default: true },
   },
 }

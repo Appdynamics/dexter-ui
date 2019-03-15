@@ -13,7 +13,7 @@ export default {
       Type: {
         type: 'string',
         default: 'APM',
-        enum: ['APM', 'SIM', 'DB', 'WEB'],
+        enum: ['APM', 'SIM', 'DB', 'WEB', 'MOBILE', 'BIQ'],
       },
     },
     required: ['Controller', 'UserName'],
