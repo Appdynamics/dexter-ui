@@ -10,9 +10,39 @@ export default {
       },
       required: ['From', 'To'],
     },
-    DetectedEntities: { type: 'boolean', default: true },
-    Licenses: { type: 'boolean', default: true },
+    UsersGroupsRolesPermissions: { type: 'boolean', default: true },
     Dashboards: { type: 'boolean', default: true },
+    Events: { type: 'boolean', default: true },
+    Configuration: { type: 'boolean', default: true },
+    ConfigurationComparisonReferenceAPM: { 
+      type: 'object',
+      properties: {
+        Controller: { type: 'string', default: '' },
+        Application: { type: 'string', default: '' },
+      },
+    },
+    ConfigurationComparisonReferenceWEB: { 
+      type: 'object',
+      properties: {
+        Controller: { type: 'string', default: '' },
+        Application: { type: 'string', default: '' },
+      },
+    },
+    ConfigurationComparisonReferenceMOBILE: { 
+      type: 'object',
+      properties: {
+        Controller: { type: 'string', default: '' },
+        Application: { type: 'string', default: '' },
+      },
+    },
+    ConfigurationComparisonReferenceDB: { 
+      type: 'object',
+      properties: {
+        Controller: { type: 'string', default: '' },
+        Application: { type: 'string', default: '' },
+      },
+    },
+    DetectedEntities: { type: 'boolean', default: true },
     Metrics: { type: 'boolean', default: true },
     MetricsSelectionCriteria: {
       type: 'array',
@@ -30,21 +60,13 @@ export default {
         'OSHardware',
         'CLRStats',
         'IISStats',
+        'IISReqCounts', 
+        'IISReqPerf',
         'JVMStats',
         'BusinessTransactionPercentiles',
       ],
     },
     Flowmaps: { type: 'boolean', default: true },
-    Configuration: { type: 'boolean', default: true },
-    ConfigurationComparisonReferenceCriteria: {
-      type: 'object',
-      properties: {
-        Controller: { type: 'string', default: 'https://reference.controller' },
-        Application: { type: 'string', default: 'ReferenceApp' },
-      },
-    },
-    Events: { type: 'boolean', default: true },
-    UsersGroupsRolesPermissions: { type: 'boolean', default: true },
     Snapshots: { type: 'boolean', default: true },
     SnapshotSelectionCriteria: {
       type: 'object',
@@ -123,5 +145,6 @@ export default {
         },
       },
     },
+    Licenses: { type: 'boolean', default: false },
   },
 }

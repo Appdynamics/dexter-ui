@@ -9,24 +9,13 @@ export default {
       'ui:widget': 'alt-datetime',
     },
   },
-  DetectedEntities: {
+  UsersGroupsRolesPermissions: {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Extract detected entities for this application type (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
-          Docs
-        </a>)
-      </div>
-    ),
-    'ui:options': {
-      inline: true,
-    },
-  },
-  Licenses: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        Extract license rules and license consumption (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+        Users, Groups, Roles and Permissions report shows information about each
+        and every security entity (User, Group, Role and Permission) and their
+        relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
           Docs
         </a>)
       </div>
@@ -40,6 +29,111 @@ export default {
     'ui:description': (
       <div>
         Extract dashboards, their widgets and time series (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
+  Events: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Specifies whether to extract and index Events and Health Rule Violations
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#events-boolean">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
+  Configuration: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Specifies whether to extract and index configuration (BT rules, Backend
+        rules, Data Collectors) (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
+  ConfigurationComparisonReferenceAPM: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        <p>
+          Specifies which Application to use as reference during configuration
+          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferenceapmcontroller-and-configurationcomparisonreferenceapmapplication-string">
+            Docs
+          </a>)
+        </p>
+        <p>
+          If Controller and Application are blank, then configuration comparison is performed against a blank template application.
+        </p>
+      </div>
+    ),
+  },
+  ConfigurationComparisonReferenceWEB: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        <p>
+          Specifies which Application to use as reference during configuration
+          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencewebcontroller-and-configurationcomparisonreferencewebapplication-string">
+            Docs
+          </a>)
+        </p>
+        <p>
+          If Controller and Application are blank, then configuration comparison is performed against a blank template application.
+        </p>
+      </div>
+    ),
+  },
+  ConfigurationComparisonReferenceMOBILE: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        <p>
+          Specifies which Application to use as reference during configuration
+          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencemobilecontroller-and-configurationcomparisonreferencemobileapplication-string">
+            Docs
+          </a>)
+        </p>
+        <p>
+          If Controller and Application are blank, then configuration comparison is performed against a blank template application.
+        </p>
+      </div>
+    ),
+  },
+  ConfigurationComparisonReferenceDB: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        <p>
+          Specifies which Application to use as reference during configuration
+          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencedbcontroller-and-configurationcomparisonreferencedbapplication-string">
+            Docs
+          </a>)
+        </p>
+        <p>
+          If Controller and Application are blank, then configuration comparison is performed against a blank template application.
+        </p>
+      </div>
+    ),
+  },
+  DetectedEntities: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Extract detected entities for this application type (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
           Docs
         </a>)
       </div>
@@ -82,67 +176,6 @@ export default {
       <div>
         Specifies whether to extract and index flow maps for Entities
         (Application, Tier, Node, Business Transaction and Backend) (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#flowmaps-boolean">
-          Docs
-        </a>)
-      </div>
-    ),
-    'ui:options': {
-      inline: true,
-    },
-  },
-  Configuration: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        Specifies whether to extract and index configuration (BT rules, Backend
-        rules, Data Collectors) (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">
-          Docs
-        </a>)
-      </div>
-    ),
-    'ui:options': {
-      inline: true,
-    },
-  },
-  ConfigurationComparisonReferenceCriteria: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        <p>
-          Specifies which Application to use as reference during configuration
-          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">
-            Docs
-          </a>)
-        </p>
-        <p>
-          If Controller is "https://reference.controller" and Application is
-          "ReferenceApp", then configuration comparison is performed against a
-          blank template application (TemplateApplicationConfiguration.xml)
-        </p>
-      </div>
-    ),
-  },
-  Events: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        Specifies whether to extract and index Events and Health Rule Violations
-        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#events-boolean">
-          Docs
-        </a>)
-      </div>
-    ),
-    'ui:options': {
-      inline: true,
-    },
-  },
-  UsersGroupsRolesPermissions: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        Users, Groups, Roles and Permissions report shows information about each
-        and every security entity (User, Group, Role and Permission) and their
-        relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
           Docs
         </a>)
       </div>
@@ -242,6 +275,19 @@ export default {
       'ui:description': (
         <div>Contains settings for filtering by Snapshot Type</div>
       ),
+    },
+  },
+  Licenses: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Extract license rules and license consumption (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
+          Docs
+        </a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
     },
   },
 }

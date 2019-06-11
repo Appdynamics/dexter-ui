@@ -4,19 +4,34 @@ export default {
       From: '2017-12-29T18:00:00',
       To: '2017-12-29T20:00:00'
     },
+    UsersGroupsRolesPermissions: true,
+    Dashboards: true,
+    Events: true,
+    Configuration: true,
+    ConfigurationComparisonReferenceAPM : {Controller: '', Application: '' }
+    ConfigurationComparisonReferenceWEB : {Controller: '', Application: '' }
+    ConfigurationComparisonReferenceMOBILE : {Controller: '', Application: '' }
+    ConfigurationComparisonReferenceDB  : {Controller: '', Application: '' }
     Metrics: true,
     MetricsSelectionCriteria: [
-      'Transaction',
-      'AgentStats',
-      'OSHardware',
-      'CLRStats',
-      'IISStats',
-      'JVMStats',
-      'BusinessTransactionPercentiles'
+        'TransactionApplication',
+        'TransactionTier',
+        'TransactionNode',
+        'TransactionBackend',
+        'TransactionBT',
+        'TransactionSEP',
+        'TransactionError',
+        'TransactionIP',
+        'AgentStats',
+        'OSHardware',
+        'CLRStats',
+        'IISStats',
+        'IISReqCounts', 
+        'IISReqPerf',
+        'JVMStats',
+        'BusinessTransactionPercentiles'
     ],
     Flowmaps: true,
-    Configuration: true,
-    Events: true,
     Snapshots: true,
     SnapshotSelectionCriteria: {
       Tiers: ['Web'],
