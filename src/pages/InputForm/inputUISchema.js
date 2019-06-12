@@ -276,18 +276,5 @@ export default {
         <div>Contains settings for filtering by Snapshot Type</div>
       ),
     },
-  },
-  Licenses: {
-    'ui:widget': 'radio',
-    'ui:description': (
-      <div>
-        Extract license rules and license consumption (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
-          Docs
-        </a>)
-      </div>
-    ),
-    'ui:options': {
-      inline: true,
-    },
-  },
+  }
 }

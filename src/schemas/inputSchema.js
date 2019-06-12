@@ -144,7 +144,6 @@ export default {
           },
         },
       },
-    },
-    Licenses: { type: 'boolean', default: false },
+    }
   },
 }
