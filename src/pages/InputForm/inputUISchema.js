@@ -1,7 +1,12 @@
 import React from 'react'
 export default {
   TimeRange: {
-    'ui:description': <div>Note this is in UTC/GMT time</div>,
+    'ui:description': (
+        <div>
+          Specifies beginning and end of the time range to retrieve data from.
+          Note this is in UTC/GMT time (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#timerangefrom-and-timerangeto-datetime">Docs</a>)
+        </div> 
+    ), 
     From: {
       'ui:widget': 'alt-datetime',
     },
@@ -13,11 +18,8 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Users, Groups, Roles and Permissions report shows information about each
-        and every security entity (User, Group, Role and Permission) and their
-        relationship in Controller. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Users-and-Permissions-Report">
-          Docs
-        </a>)
+        Specifies whether to extract and index Users, Groups, Roles and Permissions for the Controller.
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#usersgroupsrolespermissions-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -28,9 +30,8 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Extract dashboards, their widgets and time series (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
-          Docs
-        </a>)
+        Specifies whether to extract and index Dashboards, Widgets and Time Series used by Widgets for the Controller.
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#dashboards-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -41,10 +42,8 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Specifies whether to extract and index Events and Health Rule Violations
-        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#events-boolean">
-          Docs
-        </a>)
+        Specifies whether to extract and index Events and Health Rule Violations for All Applications, Controller Notifications and Controller Audit Events.
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#events-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -55,10 +54,8 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Specifies whether to extract and index configuration (BT rules, Backend
-        rules, Data Collectors) (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">
-          Docs
-        </a>)
+        Specifies whether to extract and index configuration (BT rules, Backend rules, Data Collectors for APM, Web Page Rules for Web, and so on).
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configuration-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -70,10 +67,8 @@ export default {
     'ui:description': (
       <div>
         <p>
-          Specifies which Application to use as reference during configuration
-          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferenceapmcontroller-and-configurationcomparisonreferenceapmapplication-string">
-            Docs
-          </a>)
+          Specifies which Application to use as reference during configuration comparison 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferenceapmcontroller-and-configurationcomparisonreferenceapmapplication-string">Docs</a>)
         </p>
         <p>
           If Controller and Application are blank, then configuration comparison is performed against a blank template application.
@@ -86,10 +81,8 @@ export default {
     'ui:description': (
       <div>
         <p>
-          Specifies which Application to use as reference during configuration
-          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencewebcontroller-and-configurationcomparisonreferencewebapplication-string">
-            Docs
-          </a>)
+          Specifies which Application to use as reference during configuration comparison 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencewebcontroller-and-configurationcomparisonreferencewebapplication-string">Docs</a>)
         </p>
         <p>
           If Controller and Application are blank, then configuration comparison is performed against a blank template application.
@@ -102,10 +95,8 @@ export default {
     'ui:description': (
       <div>
         <p>
-          Specifies which Application to use as reference during configuration
-          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencemobilecontroller-and-configurationcomparisonreferencemobileapplication-string">
-            Docs
-          </a>)
+          Specifies which Application to use as reference during configuration comparison 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencemobilecontroller-and-configurationcomparisonreferencemobileapplication-string">Docs</a>)
         </p>
         <p>
           If Controller and Application are blank, then configuration comparison is performed against a blank template application.
@@ -118,10 +109,8 @@ export default {
     'ui:description': (
       <div>
         <p>
-          Specifies which Application to use as reference during configuration
-          comparison (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencedbcontroller-and-configurationcomparisonreferencedbapplication-string">
-            Docs
-          </a>)
+          Specifies which Application to use as reference during configuration comparison 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#configurationcomparisonreferencedbcontroller-and-configurationcomparisonreferencedbapplication-string">Docs</a>)
         </p>
         <p>
           If Controller and Application are blank, then configuration comparison is performed against a blank template application.
@@ -133,9 +122,8 @@ export default {
     'ui:widget': 'radio',
     'ui:description': (
       <div>
-        Extract detected entities for this application type (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File">
-          Docs
-        </a>)
+        Extract detected entities for this application type 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#detectedentities-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -149,9 +137,7 @@ export default {
         Specified whether to extract and index summary and detail metrics for
         all Entities, which are used in Entity Metrics, Entity Metric Graphs and
         Entity Details report. Used in conjunction with MetricsSelectionCriteria
-        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metrics-boolean">
-          Docs
-        </a>)
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metrics-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -164,9 +150,8 @@ export default {
     },
     'ui:description': (
       <div>
-        Selects which sets of metrics to export. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsselectioncriteria-array-of-strings">
-          Docs
-        </a>)
+        Selects which sets of metrics to export. 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsselectioncriteria-array-of-strings">Docs</a>)
       </div>
     ),
   },
@@ -175,13 +160,138 @@ export default {
     'ui:description': (
       <div>
         Specifies whether to extract and index flow maps for Entities
-        (Application, Tier, Node, Business Transaction and Backend) (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#flowmaps-boolean">
-          Docs
-        </a>)
+        (Application, Tier, Node, Business Transaction and Backend) 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#flowmaps-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
       inline: true,
+    },
+  },
+  EntityDashboards: {
+    'ui:widget': 'radio',
+    'ui:description': (
+      <div>
+        Specifies whether to take screenshots of the main screen for APM Entities 
+        (Application, Tier, Node, Business Transaction and Backend).
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboards-boolean">Docs</a>)
+      </div>
+    ),
+    'ui:options': {
+      inline: true,
+    },
+  },
+  EntityDashboardSelectionCriteria: {
+    'ui:description': (
+      <div>
+        Selects which APM entities to take screenshots on. 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriatiers-array-of-strings">Docs</a>)
+      </div>
+    ),
+    Tiers: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\Tiers',
+      'ui:options': {
+        orderable: false,
+      },
+      'ui:description': (
+        <div>
+          Filters screenshot taking to only ones these Tiers.
+          Regular expressions are supported.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriatiers-array-of-strings">Docs</a>)
+        </div>
+      ),
+    },
+    TierType: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\TierType',
+      'ui:description': (
+        <div>
+          Contains settings for filtering by Tier Type. 
+          Each of the settings specifies the type of Tier which will be included.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriatiertypesetting-boolean">Docs</a>)
+        </div>
+      ),
+      'ui:options': {
+        inline: true,
+      },
+    },
+    BusinessTransactions: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\BusinessTransactions ',
+      'ui:options': {
+        orderable: false,
+      },
+      'ui:description': (
+        <div>
+          Filters screenshot taking to only ones these Business Transactions.
+          Regular expressions are supported.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriabusinesstransactions-array-of-strings">Docs</a>)
+        </div>
+      ),
+    },
+    BusinessTransactionType: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\BusinessTransactionType',
+      'ui:widget': 'checkboxes',
+      'ui:options': {
+        inline: true,
+      },
+      'ui:description': (
+        <div>
+          Contains settings for filtering by Business Transaction Type. 
+          Each of the settings specifies the type of Business Transaction which will be included.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriabusinesstransactiontypesetting-boolean">Docs</a>)
+        </div>
+      ),
+    },
+    Nodes: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\Nodes',
+      'ui:options': {
+        orderable: false,
+      },
+      'ui:description': (
+        <div>
+          Filters screenshot taking to only ones these Nodes.
+          Regular expressions are supported.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriterianodes-array-of-strings">Docs</a>)
+        </div>
+      ),
+    },
+    NodeType: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\NodeType',
+      'ui:description': (
+        <div>
+          Contains settings for filtering by Node Type. 
+          Each of the settings specifies the type of Node which will be included.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriterianodetypesetting-boolean">Docs</a>)
+        </div>
+      ),
+      'ui:options': {
+        inline: true,
+      },
+    },
+    Backends: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\Backends',
+      'ui:options': {
+        orderable: false,
+      },
+      'ui:description': (
+        <div>
+          Filters screenshot taking to only ones these Backends.
+          Regular expressions are supported.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriabackends-array-of-strings">Docs</a>)
+        </div>
+      ),
+    },
+    BackendType: {
+      'ui:title': 'EntityDashboardSelectionCriteria\\BackendType',
+      'ui:description': (
+        <div>
+          Contains settings for filtering by Backend Type. 
+          Each of the settings specifies the type of Backend which will be included.
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#entitydashboardselectioncriteriabackendtypesetting-boolean">Docs</a>)
+        </div>
+      ),
+      'ui:options': {
+        inline: true,
+      },
     },
   },
   Snapshots: {
@@ -189,9 +299,8 @@ export default {
     'ui:description': (
       <div>
         Specifies whether to retrieve Snapshots for all Business Transactions.
-        Used in conjunction with SnapshotSelectionCriteria (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snaphots-boolean">
-          Docs
-        </a>)
+        Used in conjunction with SnapshotSelectionCriteria 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snaphots-boolean">Docs</a>)
       </div>
     ),
     'ui:options': {
@@ -201,22 +310,20 @@ export default {
   SnapshotSelectionCriteria: {
     'ui:description': (
       <div>
-        Selects which sets of metrics to export. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsselectioncriteria-array-of-strings">
-          Docs
-        </a>)
+        Selects which snapshots to export. 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriatiers-array-of-strings">Docs</a>)
       </div>
     ),
     Tiers: {
-      'ui:title': 'SnapshotSelectionCriteria\\Tiers ',
+      'ui:title': 'SnapshotSelectionCriteria\\Tiers',
       'ui:options': {
         orderable: false,
       },
       'ui:description': (
         <div>
-          Filters Snapshots to be extracted to only ones originating from these
-          Tiers. Regular expressions are supported (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriatiers-array-of-strings">
-            Docs
-          </a>)
+          Filters Snapshots to be extracted to only ones originating from these Tiers. 
+          Regular expressions are supported 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriatiers-array-of-strings">Docs</a>)
         </div>
       ),
     },
@@ -225,9 +332,8 @@ export default {
       'ui:description': (
         <div>
           Contains settings for filtering by Tier Type. Each of the settings
-          specifies the type of Tier which will be included. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriatiertypesetting-boolean">
-            Docs
-          </a>)
+          specifies the type of Tier which will be included. 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriatiertypesetting-boolean">Docs</a>)
         </div>
       ),
       'ui:options': {
@@ -242,9 +348,8 @@ export default {
       'ui:description': (
         <div>
           Filters Snapshots to be extracted to only ones originating from these
-          Business Transactions. Regular expressions are supported (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactions-array-of-strings">
-            Docs
-          </a>)
+          Business Transactions. Regular expressions are supported 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactions-array-of-strings">Docs</a>)
         </div>
       ),
     },
@@ -258,22 +363,27 @@ export default {
         <div>
           Contains settings for filtering by Business Transaction Type. Each of
           the settings specifies the type of Business Transaction which will be
-          included. (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactiontypesetting-boolean">
-            Docs
-          </a>)
+          included. 
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriabusinesstransactiontypesetting-boolean">Docs</a>)
         </div>
       ),
     },
     UserExperience: {
       'ui:title': 'SnapshotSelectionCriteria\\UserExperience',
       'ui:description': (
-        <div>Contains settings for filtering by User Experience</div>
+        <div>
+          Contains settings for filtering by User Experience
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriauserexperiencesetting-boolean">Docs</a>)
+        </div>
       ),
     },
     SnapshotType: {
       'ui:title': 'SnapshotSelectionCriteria\\SnapshotType',
       'ui:description': (
-        <div>Contains settings for filtering by Snapshot Type</div>
+        <div>
+          Contains settings for filtering by Snapshot Type
+          (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriasnapshottypesetting-boolean">Docs</a>)
+        </div>
       ),
     },
   }

@@ -6,7 +6,7 @@ export default {
     type: 'object',
     properties: {
       Controller: { type: 'string', format: 'uri' },
-      UserName: { type: 'string', pattern: '.*@.*' },
+      UserName: { type: 'string', pattern: '.*@.*|BEARER' },
       UserPassword: { type: 'string' },
       Application: { type: 'string' },
       NameRegex: { type: 'boolean', default: false },
@@ -16,6 +16,6 @@ export default {
         enum: ['APM', 'SIM', 'DB', 'WEB', 'MOBILE', 'BIQ'],
       },
     },
-    required: ['Controller', 'UserName'],
+    required: ['Controller', 'UserName', 'Application'],
   },
 }
