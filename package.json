@@ -43,17 +43,19 @@
     "lint-staged": "^9.4.2",
     "prettierrc": "0.0.0-5"
   },
-    "lint-staged": {
-      "src/**/*.{js,jsx}": [
-        "npm run --silent lint:js:fix", "git add"
-      ],
-      "src/**/*.scss": [
-        "npm run --silent lint:scss:fix", "git add"
-      ]
-    },
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run --silent lint:js:fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "npm run --silent lint:scss:fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  }
 }
