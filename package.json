@@ -49,7 +49,7 @@
       ],
       "src/**/*.scss": [
         "npm run --silent lint:scss:fix", "git add"
-      ],
+      ]
     },
     "husky": {
       "hooks": {

@@ -13,6 +13,13 @@ export default {
     UsersGroupsRolesPermissions: { type: 'boolean', default: true },
     Dashboards: { type: 'boolean', default: true },
     Events: { type: 'boolean', default: true },
+    EventsSelectionCriteria: {
+      type: 'array',
+      items: { type: 'string' },
+      default: [
+        'All',
+      ],
+    },
     Configuration: { type: 'boolean', default: true },
     ConfigurationComparisonReferenceAPM: { 
       type: 'object',

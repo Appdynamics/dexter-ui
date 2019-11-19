@@ -50,6 +50,17 @@ export default {
       inline: true,
     },
   },
+  EventsSelectionCriteria: {
+    'ui:options': {
+      orderable: false,
+    },
+    'ui:description': (
+      <div>
+        Selects which event types to extract 
+        (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#eventsselectioncriteria-array-of-strings">Docs</a>)
+      </div>
+    ),
+  },
   Configuration: {
     'ui:widget': 'radio',
     'ui:description': (
