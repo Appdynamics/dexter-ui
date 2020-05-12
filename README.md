@@ -17,8 +17,6 @@ Use _dexter-ui_ here: https://appdynamics.github.io/dexter-ui/
 
 # Deploy
 
-_dexter-ui_ is already deployed to https://sys13.github.io/dexter-ui
-
 [GitHub Deploy Instructions](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages)
 
 # Maintainer
