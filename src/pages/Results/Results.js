@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import FileSaver from 'file-saver';
+import FileSaver from 'file-saver'
 
 export default class Results extends Component {
     constructor(props) {
@@ -11,7 +11,15 @@ export default class Results extends Component {
         const Output = JSON.parse(localStorage.getItem('formDataOutput'))
         const Target = JSON.parse(localStorage.getItem('formDataTarget'))
         const results = { Input, Output, Target }
-        this.state = { results }
+        this.state = { results, jobFileName: "myjob.json" }
+    }
+    onSaveFile() {
+        var stringToPutInFile = JSON.stringify(this.state.results, null, 2)
+        var blob = new Blob([stringToPutInFile], { type: "text/plain;charset=utf-8" })
+        FileSaver.saveAs(blob, this.state.jobFileName)
+    }
+    onJobFileNameChanged(e) {
+        this.setState({ jobFileName: e.target.value })
     }
     render() {
         return (
@@ -39,23 +47,17 @@ export default class Results extends Component {
                         />
                     </p>
                     <p>
-                        Or save as this job fil as this file name:
+                        Or save as this job file as:
                     </p>
                     <p>
-                        <input type="text" id="txtFileName" defaultValue="myjob.json"></input>
-                        &nbsp;&nbsp;
-
-                        <button className="btn btn-primary mr-2 mb-2" id="btnSaveFile" onClick={this.onTestSaveFile}>
+                        <input type="text" id="txtFileName" value={this.state.jobFileName} onChange={this.onJobFileNameChanged.bind(this)} />
+                        {' '}
+                        <button className="btn btn-primary mr-2 mb-2" id="btnSaveFile" onClick={this.onSaveFile.bind(this)}>
                             Save Job File
                         </button>
                     </p>
                 </div>
             </div>
         )
-    }
-    onTestSaveFile(txtFileName) {
-        window.alert('I will figure this out soon');
-        var blob = new Blob(["Hello, world!"], { type: "text/plain;charset=utf-8" });
-        //FileSaver.saveAs(blob, "hello world.txt");
     }
 }
