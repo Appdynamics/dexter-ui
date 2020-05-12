@@ -1,5 +1,10 @@
 export default {
   Input: {
+    TimeFrame: {
+      MarkDate: '2019-10-15',
+      MarkTime: '10:00:00',
+      Duration: '1:00:00',
+    },
     TimeRange: {
       From: '2019-10-15T09:00:00',
       To: '2019-10-15T10:00:00'
@@ -7,11 +12,12 @@ export default {
     UsersGroupsRolesPermissions: true,
     Dashboards: true,
     Events: true,
+    EventsSelectionCriteria: ['All'],
     Configuration: true,
-    ConfigurationComparisonReferenceAPM : {Controller: '', Application: '' }
-    ConfigurationComparisonReferenceWEB : {Controller: '', Application: '' }
-    ConfigurationComparisonReferenceMOBILE : {Controller: '', Application: '' }
-    ConfigurationComparisonReferenceDB  : {Controller: '', Application: '' }
+    ConfigurationComparisonReferenceAPM : {Controller: '', Application: '' },
+    ConfigurationComparisonReferenceWEB : {Controller: '', Application: '' },
+    ConfigurationComparisonReferenceMOBILE : {Controller: '', Application: '' },
+    ConfigurationComparisonReferenceDB  : {Controller: '', Application: '' },
     DetectedEntities: true,
     Metrics: true,
     MetricsSelectionCriteria: [
@@ -36,160 +42,30 @@ export default {
     EntityDashboards: true,
     EntityDashboardSelectionCriteria: {
       Tiers: [ 'Web' ],
-      TierType: {
-        All: false,
-        APP_AGENT: false,
-        DOT_NET_APP_AGENT: true,
-        NATIVE_APP_AGENT: false,
-        NATIVE_DYNAMIC: false,
-        NATIVE_SDK: false,
-        NATIVE_WEB_SERVER: false,
-        NODEJS_APP_AGENT: false,
-        PHP_APP_AGENT: false,
-        PYTHON_APP_AGENT: false,
-        RUBY_APP_AGENT: false
-      },
+      TierType: ['All'],
       BusinessTransactions: [
         '/api/data',
         'Login-AuthenticationEngine',
         'Web-List-.*',
         'Async-Svc.SendEmailActivityService'
       ],
-      BusinessTransactionType: {
-        All: false,
-        SERVLET: false,
-        HTTP: false,
-        WEB_SERVICE: false,
-        POJO: false,
-        JMS: false,
-        EJB: false,
-        SPRING_BEAN: false,
-        STRUTS_ACTION: false,
-        ASP_DOTNET: true,
-        ASP_DOTNET_WEB_SERVICE: false,
-        DOTNET_REMOTING: false,
-        WCF: true,
-        DOTNET_JMS: false,
-        POCO: false,
-        PHP_WEB: false,
-        PHP_MVC: false,
-        PHP_DRUPAL: false,
-        PHP_WORDPRESS: false,
-        PHP_CLI: false,
-        PHP_WEB_SERVICE: false,
-        NODEJS_WEB: false,
-        NATIVE: false,
-        WEB: false,
-        PYTHON_WEB: false,
-        RUBY_WEB: false,
-        RUBY_RAILS: false,
-        BINARY_REMOTING: false
-      },
+      BusinessTransactionTypes: ['All'],
       Nodes: [ 'Node.*' ],
-      NodeType: {
-        All: false,
-        APP_AGENT: false,
-        DOT_NET_APP_AGENT: true,
-        NATIVE_APP_AGENT: false,
-        NATIVE_DYNAMIC: false,
-        NATIVE_SDK: false,
-        NATIVE_WEB_SERVER: false,
-        NODEJS_APP_AGENT: false,
-        PHP_APP_AGENT: false,
-        PYTHON_APP_AGENT: false,
-        RUBY_APP_AGENT: false
-      },
+      NodeTypes: ['All'],
       Backends: [ 'Oracle.*' ],
-      BackendType: {
-        All: false,
-        SOCKET: false,
-        HTTP: false,
-        CUSTOM: false,
-        CUSTOM_ASYNC: false,
-        FILE_SERVER: false,
-        MAIL_SERVER: false,
-        WEB_SERVICE: false,
-        ERP: false,
-        CACHE: false,
-        WEBSPHERE_MQ: false,
-        MAINFRAME: false,
-        TIBCO_ASYNC: false,
-        TIBCO: false,
-        ESB: false,
-        SAP: false,
-        AVRO: false,
-        THRIFT: false,
-        CASSANDRA: false,
-        MQ: false,
-        JMS: false,
-        WEBSOCKET: false,
-        JDBC: false,
-        RMI: false,
-        LDAP: false,
-        CORBA: false,
-        RABBITMQ: false,
-        ADODOTNET: false,
-        DOTNETDirectoryServices: false,
-        DOTNETRemoting: false,
-        DOTNETMessaging: false,
-        WCF: false,
-        MSMQ: false,
-        DB: false,
-        NETWORK: false
-      }
-    }
+      BackendTypes: ['All']
+    },
     Snapshots: true,
     SnapshotSelectionCriteria: {
       Tiers: ['Web'],
-      TierType: {
-        All: false,
-        APP_AGENT: false,
-        DOT_NET_APP_AGENT: true,
-        NATIVE_APP_AGENT: false,
-        NATIVE_DYNAMIC: false,
-        NATIVE_SDK: false,
-        NATIVE_WEB_SERVER: false,
-        NODEJS_APP_AGENT: false,
-        PHP_APP_AGENT: false,
-        PYTHON_APP_AGENT: false,
-        RUBY_APP_AGENT: false
-      },
+      TierTypes: ['All'],
       BusinessTransactions: [
         '/api/data',
         'Login-AuthenticationEngine',
         'Web-List-.*',
         'Async-Svc.SendEmailActivityService'
       ],
-      BusinessTransactionType: {
-        All: false,
-        SERVLET: false,
-        HTTP: false,
-        WEB_SERVICE: false,
-        POJO: false,
-        JMS: false,
-        EJB: false,
-        SPRING_BEAN: false,
-        STRUTS_ACTION: false,
-        ASP_DOTNET: true,
-        ASP_DOTNET_WEB_SERVICE: false,
-        DOTNET_REMOTING: false,
-        WCF: true,
-        DOTNET_JMS: false,
-        POCO: false,
-        PHP_WEB: false,
-        PHP_MVC: false,
-        PHP_DRUPAL: false,
-        PHP_WORDPRESS: false,
-        PHP_CLI: false,
-        PHP_WEB_SERVICE: false,
-        NODEJS_WEB: false,
-        NATIVE: false,
-        WEB: false,
-        PYTHON_WEB: false,
-        RUBY_WEB: false,
-        RUBY_RAILS: false,
-        BINARY_REMOTING: false
-      },
+      BusinessTransactionTypes: ['All'],
       UserExperience: {
         Normal: false,
         Slow: true,
@@ -207,15 +83,18 @@ export default {
   Output: {
     UsersGroupsRolesPermissions: true,
     Dashboards: true,
+    Licenses: true,
     Events: true,
     Configuration: true,
     DetectedEntities: true,
     EntityMetrics: true,
     EntityMetricGraphs: true,
+    Flowmaps: true,
     EntityDashboards: true,
     EntityDetails: true,
     Snapshots: true,
-    FlameGraphs: true
+    FlameGraphs: true,
+    HealthCheck: true
   },
   Target: [
     {
@@ -223,7 +102,7 @@ export default {
       UserName: 'username@account',
       UserPassword: '',
       Application: 'ABCDEFG',
-      NameRegex: false
+      NameRegex: false,
       Type: 'APM'
     }
   ]
