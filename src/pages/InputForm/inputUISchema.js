@@ -363,12 +363,32 @@ export default {
     MetricsSelectionCriteria: {
         'ui:description': (
             <div>
-                (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsselectioncriteria-array-of-strings">Docs</a>)<br />
-                Selects which sets of metrics to export.
+                (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsselectioncriteria">Docs</a>)<br />
+                Provides filtering abilities for the metric extraction.
             </div>
         ),
-        'ui:options': {
-            orderable: false,
+        MetricSets: {
+            'ui:description': (
+                <div>
+                    (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricsets-array-of-strings">Docs</a>)<br />
+                    Selects which sets of metrics to export.
+                </div>
+            ),
+            'ui:options': {
+                orderable: false,
+            },
+        },
+        IncludeHourAndMinuteDetail: {
+            'ui:widget': 'radio',
+            'ui:description': (
+                <div>
+                    (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#includehourandminutedetail-boolean">Docs</a>)<br />
+                    Specifies whether to extract granular metric detail.
+                </div>
+            ),
+            'ui:options': {
+                inline: true,
+            },
         },
     },
     Flowmaps: {
@@ -564,6 +584,18 @@ export default {
             ),
             'ui:options': {
                 inline: true,
+            },
+        },
+        RequestIDs: {
+            'ui:title': 'SnapshotSelectionCriteria\\RequestIDs',
+            'ui:description': (
+                <div>
+                    (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#snapshotselectioncriteriarequestids-array-of-strings">Docs</a>)<br />
+                    Selects which Business Transaction snapshots identified by the RequestID GUID to extract.
+                </div>
+            ),
+            'ui:options': {
+                orderable: false,
             },
         },
         UserExperience: {

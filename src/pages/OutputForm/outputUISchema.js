@@ -155,6 +155,18 @@ export default {
             inline: true,
         },
     },
+    IndividualSnapshots: {
+        'ui:widget': 'radio',
+        'ui:description': (
+            <div>
+                (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#individualsnapshots-boolean">Docs</a>)<br />
+                Individual Snapshot report provides information about Snapshot, Segments, Exit Calls, traversed Service Endpoints and Business Data for single Snapshot.
+            </div>
+        ),
+        'ui:options': {
+            inline: true,
+        },
+    },
     FlameGraphs: {
         'ui:widget': 'radio',
         'ui:description': (

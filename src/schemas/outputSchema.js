@@ -14,6 +14,7 @@ export default {
     EntityDashboards: { type: 'boolean', default: true },
     EntityDetails: { type: 'boolean', default: true },
     Snapshots: { type: 'boolean', default: true },
+    IndividualSnapshots: { type: 'boolean', default: false },
     FlameGraphs: { type: 'boolean', default: true },
     HealthCheck: { type: 'boolean', default: false }
   },
