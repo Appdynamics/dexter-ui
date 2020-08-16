@@ -391,6 +391,18 @@ export default {
             },
         },
     },
+    MetricsList: {
+        'ui:widget': 'radio',
+        'ui:description': (
+            <div>
+                (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricslist-boolean">Docs</a>)<br />
+                Specifies whether to extract and index list of registered and reporting metrics for APM Applications.
+            </div>
+        ),
+        'ui:options': {
+            inline: true,
+        },
+    },
     Flowmaps: {
         'ui:widget': 'radio',
         'ui:description': (

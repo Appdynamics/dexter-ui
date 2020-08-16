@@ -9,8 +9,9 @@
     "\\src\\pages\\InputForm",
     "\\src\\pages\\OutputForm",
     "\\src\\pages\\Results",
-    "\\src\\pages\\TargetForm"
+    "\\src\\pages\\TargetForm",
+    "\\src\\schemas"
   ],
-  "SelectedNode": "\\src\\pages\\Results\\Results.js",
+  "SelectedNode": "\\src\\pages\\InputForm\\inputUISchema.js",
   "PreviewInSolutionExplorer": false
 }

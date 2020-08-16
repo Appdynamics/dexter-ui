@@ -107,6 +107,18 @@ export default {
             inline: true,
         },
     },
+    MetricsList: {
+        'ui:widget': 'radio',
+        'ui:description': (
+            <div>
+                (<a href="https://github.com/Appdynamics/AppDynamics.DEXTER/wiki/Job-File#metricslist-boolean-1">Docs</a>)<br />
+                Registered APM Metrics report shows list of all metrics registereb by nodes and tiers and business transactions in APM Application, and also tells you whether they had any reported values in last hour of the reporting interval.
+            </div>
+        ),
+        'ui:options': {
+            inline: true,
+        },
+    },
     Flowmaps: {
         'ui:widget': 'radio',
         'ui:description': (
