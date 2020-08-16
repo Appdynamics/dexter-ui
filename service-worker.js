@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dexter-ui/precache-manifest.253c1ce29015a8276fccfb16577e3ef6.js"
+  "/dexter-ui/precache-manifest.a72f842da9d81b68cbe596f8eee3c79b.js"
 );
 
 self.addEventListener('message', (event) => {

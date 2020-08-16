@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48789f750819f203385781d519235db2",
+    "revision": "4b7b39a759af174a0b1fa31b35de83fd",
     "url": "/dexter-ui/index.html"
   },
   {
-    "revision": "36ac9d33d42da20430de",
+    "revision": "4067e6d558460e546952",
     "url": "/dexter-ui/static/css/main.61d41ae0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dexter-ui/static/js/2.b61f080a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "36ac9d33d42da20430de",
-    "url": "/dexter-ui/static/js/main.94f8e782.chunk.js"
+    "revision": "4067e6d558460e546952",
+    "url": "/dexter-ui/static/js/main.155b94ec.chunk.js"
   },
   {
     "revision": "7112a0cb0a11f80f76fd",
