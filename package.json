@@ -35,7 +35,7 @@
     "react-helmet": "^5.2.0",
     "react-jsonschema-form": "^1.0.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "shx": "^0.3.1",
     "source-map-explorer": "^1.5.0"
   },
